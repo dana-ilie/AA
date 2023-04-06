@@ -1,0 +1,11 @@
+add 10
+add 20
+add 30
+add 40
+add 50
+add 60
+modify 21 30
+modify 20 30
+del 30
+modify 20 30
+stop

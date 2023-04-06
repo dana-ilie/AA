@@ -1,0 +1,8 @@
+add 1300
+add 1200
+add 1500
+add 2700
+add 700
+del 1300
+del 1500
+stop

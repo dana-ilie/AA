@@ -1,0 +1,13 @@
+add 3579
+add 1
+add 99999
+add 678
+add 321
+add 3
+del 1
+modify 99999 2000
+modify 5 7
+modify 9000 2
+modify 3579 9000
+modify 9000 2
+stop

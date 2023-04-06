@@ -1,0 +1,32 @@
+add 10
+add 9
+add 8
+add 7
+add 6
+add 5
+add 4
+add 3
+add 2
+add 1
+modify 1 101
+modify 2 102
+modify 3 103
+modify 4 104
+modify 5 105
+modify 6 106
+modify 7 107
+modify 8 108
+modify 9 109
+modify 10 110
+modify 11 111
+modify 12 112
+modify 13 113
+modify 14 114
+modify 15 115
+modify 16 116
+modify 17 117
+modify 18 118
+modify 19 119
+modify 20 120
+stop
+

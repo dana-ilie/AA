@@ -1,0 +1,41 @@
+add 1
+add 6
+add 11
+add 16
+add 21
+add 26
+add 31
+add 36
+add 41
+add 46
+add 51
+add 56
+add 61
+add 66
+add 71
+add 76
+add 81
+add 86
+add 91
+add 96
+modify 1 101
+modify 6 106
+modify 11 111
+modify 16 116
+modify 21 121
+modify 26 126
+modify 31 131
+modify 36 136
+modify 41 141
+modify 46 146
+del 101
+del 106
+del 111
+del 116
+del 121
+del 126
+del 131
+del 136
+del 141
+del 146
+stop

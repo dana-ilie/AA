@@ -1,0 +1,7 @@
+add 200
+add 300
+add 500
+del 200
+del 300
+del 500
+stop

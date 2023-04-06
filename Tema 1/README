@@ -1,0 +1,108 @@
+ILIE DANA MARIA - 324 CA
+ -------------------------------------------------------------------------------------------------------------------------------------------
+	Am rulat checker-ul folosind comenzile:
+	python3 checker.py --algo p1 --unique-tests --task 6
+	python3 checker.py --algo p2 --unique-tests --task 6
+	python3 checker.py --algo best --unique-tests --task 6
+
+ -------------------------------------------------------------------------------------------------------------------------------------------
+	Ce reprezinta fiecare fisier din arhiva:
+
+ -------------------------------------------------------------------------------------------------------------------------------------------
+	In directorul "in" se afla toate testele de intrare pentru cei doi algoritmi.
+	In ceea ce priveste testele de intrare, sunt prezente atat teste generate manual, 
+cat si teste generate automat. Exista atat seturi de date sortate crescator, cat si
+ordonate aleator. De asemenea, initial testele sunt realizate pe multimi cu mai putine
+elemente si, ulterior, sunt generate teste cu mult mai multe elemente. Testele verifica
+exclusiv fiecare operatie  suportata de structurile de date in parte, dar si operatii 
+multiple combinate.
+
+	In directorul "out" se gasesc directoarele "best", "p1", "p2", care 
+contin rezultatele asteptate in urma rularii algoritmilor pe testele de
+intrare.
+ -------------------------------------------------------------------------------------------------------------------------------------------
+	Fisierul "treap.c" contine implementarea efectiva a functiilor care
+realizeaza operatiile legate de treap,  precum: crearea treap-ului, 
+adaugarea unui element in treap, stergerea unui element din treap etc.
+
+	Fisierul "treap.h" contine semnaturile tuturor functiilor din "treap.c"
+
+	Fisierul "testTreap.c" contine functia "main", care realizeaza testarea
+operatiilor ce tin de treap.  In aceasta functie se apeleaza "treap_create"
+pentru a crea structura unui  treap (mai exact a unei multimi).
+
+	Daca se primeste comanda "add", se va realiza adaugarea unui element
+in multime. Acest lucru se realizeaza  doar dupa ce se verifica daca elementul
+nu a fost deja adaugat anterior, pentru a putea mentine astfel caracterul 
+de multime al treap-ului.
+
+	Daca se primeste comanda "del", se va realiza stergerea unui element
+din multime prin apelarea functiei "treap_delete".
+
+	Daca se primeste comanda "modify", se va face modificarea valorii unui 
+element din multime("old_value"), fiind inlocuit cu "new_value". Pentru a realiza
+acest lucru am ales sa apelez "treap_delete" pentru a elimina "old_value" din
+multime si  ulterior "treap_insert" pentru a adauga "new_value".
+
+	Daca se primeste comanda "stop" se va apela functia "check_treap"
+pentru a verifica daca multimea respecta proprietatile unui treap. In caz 
+afirmativ, functia intoarce numarul de elemente(noduri) din treap, iar in caz
+contrar intoarce o valoare negativa. Ulterior se realizeaza printarea 
+tuturor nodurilor in urma unei parcurgeri "inordine" pentru a evidentia
+proprietatea de arbore binar de cautare. Aceasta parcurgere trebuie sa 
+genereze elementele multimii sortate crescator. In final se realizeaza eliberarea
+memoriei programului si se opreste aplicatia.
+
+ -------------------------------------------------------------------------------------------------------------------------------------------
+	Fisierul "Hashtable.c" contine implementarea tuturor functiilor care
+realizeaza operatiile ce tin de un tabel de dispersie, precum: crearea acestuia,
+adaugarea unui element in multime, stergerea unui element din multime etc.
+
+	Fisierul "Hashtable.h" contine semnaturile tuturor functiilor din "Hashtable.c
+	
+	Fisierul "LinkedList.c" contine o serie de functii care implementeaza strucutra 
+de date numita "lista simplu inlantuita".
+	Fisierul "LinkedList.h" contine semnaturile tuturor functiilor din "LinkedList.c"
+
+	 M-am folosit de liste inlantuite pentru a trata coliziunile din tabelul de 
+dispersie, aceasta metoda purtand numele de "direct chaining". Astfel, este 
+folosita cate o lista inlantuit pentru fiecare "bucket" al tabelului de dispersie, 
+avand deci un array de liste. Fiecare lista este asociata  unui anumit hash, obtinut
+prin aplicare unei functii de hashing asupra cheii.
+
+	Fisierul "testHashtable.c" contine functia  "main", care realizeaza 
+testarea tuturor operatiilor.   In aceasta functie se apeleaza "ht_create"
+pentru a crea structura unui tabel de dispersie (mai exact a unei multimi).
+
+	Daca se primeste comanda "add", se va realiza adaugarea unui element
+in multime, folosind functia "ht_put". Acest lucru se realizeaza  doar dupa ce
+se verifica daca elementul nu a fost deja adaugat anterior, pentru a putea 
+mentine astfel caracterul  de multime. 
+	Inserarea in hashtable presupune gasirea indexului corect si 
+adaugarea elementului la lista corespunzatoare.
+
+	Daca se primeste comanda "del", se va realiza stergerea unui element
+din multime prin apelarea functiei "ht_remove_entry".
+
+	Daca se primeste comanda "modify", se va face modificarea valorii unui 
+element din multime("old_value"), fiind inlocuit cu "new_value". Pentru a realiza
+acest lucru am ales sa apelez "ht_remove_entry" pentru a elimina "old_value" din
+multime si  ulterior "ht_put" pentru a adauga "new_value".
+
+	Daca se primeste comanda "stop" se realizeaza eliberarea
+memoriei programului si se opreste aplicatia.
+
+ -------------------------------------------------------------------------------------------------------------------------------------------
+	In fisierul "Makefile" exista regulile de compilare si rulare a programului.
+Pentru compilare este folosit regula "build". Pentru fiecare algoritm implementat
+exista o regula corespunzatoare de run: "run-p1" si "run-p2". De asemenea, este
+prezenta o regula separata de run pentru cel mai bun algoritm, "run-best". In plus, 
+sunt incluse si regulile "generate-p1" si "generate-p2" in cazul in care se doreste 
+vizualizarea rezultatelor testelor pentru fiecare algoritm.
+
+ -------------------------------------------------------------------------------------------------------------------------------------------
+Credits:
+https://ocw.cs.pub.ro/courses/sd-ca/laboratoare/lab-04
+https://ocw.cs.pub.ro/courses/sd-ca/laboratoare/lab-10
+https://stackoverflow.com/a/12996028/7883884
+http://www.cse.yorku.ca/~oz/hash.html

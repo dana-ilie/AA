@@ -1,0 +1,10 @@
+add 1372
+add 2094
+add 1
+add 3
+modify 1372 6
+modify 3 5700
+del 13
+modify 1 13
+del 13
+stop
